@@ -3,9 +3,8 @@ package Bai01;
 public class HOAQUA {
     public int SoLuong, GiaBan;
     public float SoCan;
-    public String NguonGoc;
     public HOAQUA(){}
-    public HOAQUA(int SoLuong, int GiaBan, int SoCan, String NguonGoc){}
+    public HOAQUA(int SoLuong, int GiaBan, int SoCan){}
     public int getSoluong(int i){
         return this.SoLuong;
     }
@@ -14,9 +13,6 @@ public class HOAQUA {
     }
     public float getSocan(float f){
         return this.SoCan;
-    }
-    public String getNguongoc(){
-        return this.NguonGoc;
     }
     public void setSoluong(){
         this.SoLuong = SoLuong;
@@ -27,13 +23,8 @@ public class HOAQUA {
     public void setSoCan(){
         this.SoCan = SoCan;
     }
-    public void setNguongoc(){
-        this.NguonGoc = NguonGoc;
-    }
-    public String toString(){
-        return this.SoLuong +" "+ this.GiaBan +" "+ this.SoCan +" "+ this.NguonGoc;
-    }
 }
+
 
 
 
@@ -68,12 +59,10 @@ class TAO extends HOAQUA{
         this.Loai = Loai;
     }
     public String getLoai(int SoCan){
-        return this.Loai = "tao";
+        return this.Loai;
     }
     public void setLoai(String Loai){
         this.Loai = Loai;
-    }
-    public void getLoai() {
     }
 }
 
@@ -84,17 +73,14 @@ class TAO extends HOAQUA{
 package Bai01;
 
 public class CAMCP extends CAM{
-    public boolean PhanVung;
+    public String PhanVung;
     public CAMCP(){}
-    public CAMCP(int SoLuong, int GiaBan, float SoCan, String NguonGoc, boolean PhanVung){
-        super(SoLuong, GiaBan, SoCan, NguonGoc);
+    public CAMCP(int SoLuong, int GiaBan, float SoCan, String PhanVung){
         this.PhanVung = PhanVung;
     }
-    public boolean getVung(){
-        return this.PhanVung = PhanVung;
-    }
-    public String toString(){
-        return null;
+    public String getVung(){
+        System.out.println("Hai Phong");
+        return this.PhanVung;
     }
 }
 
@@ -105,13 +91,13 @@ public class CAMCP extends CAM{
 package Bai01;
 
 public class CAMS extends CAM {
-    public boolean PhanVung = true;
+    public String PhanVung;
     public CAMS(){}
-    public CAMS(int SoLuong, int GiaBan, float SoCan, String PhanVung){}
-    public boolean getVung(){
-        return this.PhanVung;
-    }
-    public void setVung(boolean Phanvung){
+    public CAMS(int SoLuong, int GiaBan, float SoCan, String PhanVung){
         this.PhanVung = PhanVung;
+    }
+    public String getVung(){
+        System.out.println("Ha Giang - Tuyen Quang - Yen Bai");
+        return this.PhanVung;
     }
 }
