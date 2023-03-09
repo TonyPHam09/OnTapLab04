@@ -1,0 +1,117 @@
+package Bai01;
+
+public class HOAQUA {
+    public int SoLuong, GiaBan;
+    public float SoCan;
+    public String NguonGoc;
+    public HOAQUA(){}
+    public HOAQUA(int SoLuong, int GiaBan, int SoCan, String NguonGoc){}
+    public int getSoluong(int i){
+        return this.SoLuong;
+    }
+    public int getGiaban(int i){
+        return this.GiaBan;
+    }
+    public float getSocan(float f){
+        return this.SoCan;
+    }
+    public String getNguongoc(){
+        return this.NguonGoc;
+    }
+    public void setSoluong(){
+        this.SoLuong = SoLuong;
+    }
+    public void setGiaban(){
+        this.GiaBan = GiaBan;
+    }
+    public void setSoCan(){
+        this.SoCan = SoCan;
+    }
+    public void setNguongoc(){
+        this.NguonGoc = NguonGoc;
+    }
+    public String toString(){
+        return this.SoLuong +" "+ this.GiaBan +" "+ this.SoCan +" "+ this.NguonGoc;
+    }
+}
+
+
+
+
+
+package Bai01;
+
+class CAM extends HOAQUA{
+    public String Loai;
+    public CAM(){}
+    public CAM(int SoLuong, int GiaBan, float SoCan, String Loai){
+        this.Loai = Loai;
+    }
+    public String getLoai(int SoCan){
+        return this.Loai;
+    }
+    public void setLoai(String Loai){
+        this.Loai = Loai;
+    }
+}
+
+
+
+
+
+package Bai01;
+
+class TAO extends HOAQUA{
+    public String Loai;
+    public TAO(){}
+    public TAO(int SoLuong, int GiaBan, float SoCan, String Loai){
+        this.Loai = Loai;
+    }
+    public String getLoai(int SoCan){
+        return this.Loai = "tao";
+    }
+    public void setLoai(String Loai){
+        this.Loai = Loai;
+    }
+    public void getLoai() {
+    }
+}
+
+
+
+
+
+package Bai01;
+
+public class CAMCP extends CAM{
+    public boolean PhanVung;
+    public CAMCP(){}
+    public CAMCP(int SoLuong, int GiaBan, float SoCan, String NguonGoc, boolean PhanVung){
+        super(SoLuong, GiaBan, SoCan, NguonGoc);
+        this.PhanVung = PhanVung;
+    }
+    public boolean getVung(){
+        return this.PhanVung = PhanVung;
+    }
+    public String toString(){
+        return null;
+    }
+}
+
+
+
+
+
+package Bai01;
+
+public class CAMS extends CAM {
+    public boolean PhanVung = true;
+    public CAMS(){}
+    public CAMS(int SoLuong, int GiaBan, float SoCan, String PhanVung){}
+    public boolean getVung(){
+        return this.PhanVung;
+    }
+    public void setVung(boolean Phanvung){
+        this.PhanVung = PhanVung;
+    }
+}
