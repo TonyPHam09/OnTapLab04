@@ -101,3 +101,44 @@ public class CAMS extends CAM {
         return this.PhanVung;
     }
 }
+
+
+
+
+
+package Bai01;
+import java.util.Scanner;
+
+public class mainHOAQUA {
+    public static void main(String[] args) {
+        int a;
+        boolean b;
+        try (Scanner sc = new Scanner(System.in)) {
+            HOAQUA hoaqua = new HOAQUA();
+            CAMS cams = new CAMS();
+            CAMCP camcp = new CAMCP();
+            System.out.println("so luong: ");
+            hoaqua.getSoluong(sc.nextInt());
+            System.out.println("so can nang: ");
+            hoaqua.getSocan(sc.nextFloat());
+            System.out.println("gia ban: ");
+            hoaqua.getGiaban(sc.nextInt());
+            System.out.println("true = cam, false = tao: ");
+            b = sc.nextBoolean();
+            if(b == true){
+            System.out.println("Loai Cam(1 = Cao Phong - 0 = Sanh): ");
+            a = sc.nextInt();
+            if(a == 1){
+                System.out.println("Cam Cao Phong");
+                camcp.getVung();
+            }
+            else{
+                if(a == 0){
+                    System.out.println("Cam Sanh ");
+                    cams.getVung();                
+                }
+            }            
+            }
+        }
+    }
+}
