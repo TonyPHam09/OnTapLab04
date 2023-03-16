@@ -142,3 +142,68 @@ public class mainHOAQUA {
         }
     }
 }
+
+
+public class TestArray3 {
+    public static void main(String args[]) {
+ 
+        // khai báo và khởi tạo mảng 2 chiều
+        int arr[][] = { { 1, 2, 3 }, { 2, 4, 5 }, { 4, 4, 5 } };
+ 
+        // in mảng 2 chiều r màn hình
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+ 
+    }
+}
+
+
+
+
+
+Mảng 3
+
+package vn.viettuts.array;
+ 
+import java.util.Scanner;
+ 
+public class ArrayExample1 {
+    public static Scanner scanner = new Scanner(System.in);
+ 
+    /**
+     * main
+     * 
+     * @param args
+     */
+    public static void main(String[] args) {
+        System.out.print("Nhập số phần tử của mảng: ");
+        int n = scanner.nextInt();
+        // khởi tạo mảng arr
+        int[] arr = new int[n];
+        System.out.print("Nhập các phần tử của mảng: \n");
+        for (int i = 0; i < n; i++) {
+            System.out.printf("a[%d] = ", i);
+            arr[i] = scanner.nextInt();
+        }
+        System.out.print("Các phần tử của mảng: ");
+        show(arr);
+    }
+ 
+    /**
+     * in các phần tử của mảng ra màn hình
+     * 
+     * @param arr: mảng các số nguyên
+     * @param n: số phần tử của mảng
+     */
+    public static void show(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
+
+
